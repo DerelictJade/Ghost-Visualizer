@@ -1,0 +1,151 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#container {
+    display: flex;
+    height: 100%;
+}
+
+#viewer {
+    flex: 1;
+    background: black;
+}
+
+#sidebar {
+    width: 300px;
+    background: #222;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#sidebar.dragover {
+    background: #333;
+    border: 2px dashed #00ffcc;
+}
+
+#sidebar h2 {
+    margin-top: 0;
+}
+
+#settings {
+    flex: 1;
+    overflow-y: auto;
+}
+
+#dropZone {
+    flex: none;
+    padding: 10px;
+    border: 2px dashed #555;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#dropZone.dragover {
+    border-color: #00ffcc;
+    background: rgba(0, 255, 204, 0.1);
+}
+
+.slider-group {
+    margin-top: 7px;
+}
+
+.slider-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.slider-group input[type="range"] {
+    width: 100%;
+    margin: 0;
+}
+
+#ghostList {
+    margin-top: 1em;
+}
+
+.ghost-card {
+    border: 1px solid #777;
+    background: #202020;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.ghost-card input[type="text"] {
+    margin: 0.4em;
+    border: 1px solid #333;
+    background: #eee;
+    padding: 3px;
+    font-size: 15px;
+    display: block;
+}
+
+.ghost-card p {
+    display: inline;
+    margin: 0.4em;
+}
+
+.ghost-card input[type="color"] {
+    border: 1px solid #777;
+    margin-left: 1em;
+    background: #000;
+}
+
+.ghost-card button {
+    margin: 0.4em;
+    display: block;
+    border-color: #202020;
+    background: #a01919;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 4px 12px 4px 12px;
+}
+
+#animationControls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(140, 0, 172, 0.3);
+    color: white;
+    border-radius: 8px;
+    font-family: sans-serif;
+    z-index: 1000;
+    padding: 12px 15px 15px 15px;
+    width: 30%;
+}
+
+#timer {
+    text-align: center;
+}
+
+#animationControls button {
+    background: #00ffcc;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#animationControls button:hover {
+    background: #00ddb0;
+}
+
+#animationSlider {
+    width: 80%;
+    max-width: 600px;
+    z-index: 1000;
+}
